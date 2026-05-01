@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀페이지 스크롤 데모</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="top-header__inner">
+            <a class="logo" href="index.html">로고</a>
+            <nav aria-label="메인 메뉴">
+                <ul class="main-menu">
+                    <li data-menuanchor="company" class="active"><a href="#company">회사소개</a></li>
+                    <li data-menuanchor="product"><a href="#product">제품소개</a></li>
+                    <li data-menuanchor="contact"><a href="#contact">온라인문의</a></li>
+                    <li data-menuanchor="board"><a href="#board">게시판</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="모바일 메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-header">
+            <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="모바일 메뉴 닫기">×</button>
+        </div>
+        <nav aria-label="모바일 메뉴">
+            <ul class="drawer-menu">
+                <li data-menuanchor="company" class="active"><a href="#company">회사소개</a></li>
+                <li data-menuanchor="product"><a href="#product">제품소개</a></li>
+                <li data-menuanchor="contact"><a href="#contact">온라인문의</a></li>
+                <li data-menuanchor="board"><a href="#board">게시판</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="fullpage">
+        <div class="section section--bg-01">
+            <div class="fp-table">
+                <div class="fp-tableCell">
+                    <div class="section-caption">
+                        <p class="eyebrow">ABOUT US</p>
+                        <h2>회사소개</h2>
+                        <p>비전과 역사, 오시는 길 등 회사 정보를 확인해 보세요.</p>
+                        <div class="cta-row">
+                            <a class="cta-btn" href="../sub01.html">상세 페이지</a>
+                            <a class="cta-btn cta-btn--ghost" href="#product">다음 섹션</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section--bg-02">
+            <div class="fp-table">
+                <div class="fp-tableCell">
+                    <div class="section-caption">
+                        <p class="eyebrow">OUR PRODUCT</p>
+                        <h2>제품소개</h2>
+                        <p>서비스 라인업과 주요 기능을 소개합니다.</p>
+                        <div class="cta-row">
+                            <a class="cta-btn" href="../sub02.html">상세 페이지</a>
+                            <a class="cta-btn cta-btn--ghost" href="#contact">다음 섹션</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section--bg-03">
+            <div class="fp-table">
+                <div class="fp-tableCell">
+                    <div class="section-caption">
+                        <p class="eyebrow">CONTACT</p>
+                        <h2>온라인문의</h2>
+                        <p>문의 폼 또는 전화로 연락해 주세요.</p>
+                        <div class="cta-row">
+                            <a class="cta-btn" href="../sub03.html">상세 페이지</a>
+                            <a class="cta-btn cta-btn--ghost" href="#board">다음 섹션</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section--bg-04">
+            <div class="fp-table">
+                <div class="fp-tableCell">
+                    <div class="section-caption">
+                        <p class="eyebrow">COMMUNITY</p>
+                        <h2>게시판</h2>
+                        <p>공지와 소식은 커뮤니티에서 확인합니다.</p>
+                        <div class="cta-row">
+                            <a class="cta-btn" href="../sub04.html">상세 페이지</a>
+                            <a class="cta-btn cta-btn--ghost" href="#company">맨 위로</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Noto Sans KR", system-ui, -apple-system, sans-serif;
+    color: #222;
+    background-color: #111;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 고정 헤더 */
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 72px;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(10px);
+}
+
+.top-header__inner {
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.top-header .main-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.top-header .main-menu a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+.top-header .main-menu a:hover,
+.top-header .main-menu li.active a {
+    color: #0c3fb6;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hamburger-btn span {
+    display: block;
+    height: 2px;
+    background: #222;
+    border-radius: 1px;
+}
+
+.drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.drawer-overlay.is-open {
+    display: block;
+}
+
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1200;
+    width: min(300px, 88vw);
+    height: 100%;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.12);
+}
+
+.mobile-drawer.is-open {
+    transform: translateX(0);
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.drawer-close-btn {
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #444;
+}
+
+.drawer-menu {
+    list-style: none;
+    padding: 12px 0;
+}
+
+.drawer-menu a {
+    display: block;
+    padding: 14px 22px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+@media (max-width: 900px) {
+    .top-header .main-menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+}
+
+/* fullpage 섹션 배경 · 캡션 */
+#fullpage .section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#fullpage .section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(15, 20, 40, 0.55) 0%,
+        rgba(15, 20, 40, 0.25) 50%,
+        rgba(15, 20, 40, 0.45) 100%
+    );
+    z-index: 0;
+}
+
+.section--bg-01 {
+    background-image: url("./이미지쓰/Frame 1.png");
+}
+
+.section--bg-02 {
+    background-image: url("./이미지쓰/Frame 2.png");
+}
+
+.section--bg-03 {
+    background-image: url("./이미지쓰/Frame 3.png");
+}
+
+.section--bg-04 {
+    background-image: url("./이미지쓰/Frame 4.png");
+}
+
+.section-caption {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    padding: 0 clamp(22px, 5vw, 40px);
+    color: #fff;
+}
+
+.section-caption .eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: 12px;
+}
+
+.section-caption h2 {
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+
+.section-caption p {
+    font-size: 16px;
+    line-height: 1.65;
+    opacity: 0.92;
+    margin-bottom: 24px;
+    max-width: 420px;
+}
+
+.section-caption .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    background: #fff;
+    color: #111;
+    border: 0;
+    cursor: pointer;
+}
+
+.cta-btn--ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.cta-btn:hover {
+    opacity: 0.9;
+}
+
+.fp-right {
+    right: 10px !important;
+}

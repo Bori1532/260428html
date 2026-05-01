@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 · PARANMANJAN</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-sub">
+    <header class="site-header">
+        <div class="site-header__bar">
+            <a class="logo" href="index.html">PARANMANJAN</a>
+            <nav class="main-nav" aria-label="주요 메뉴">
+                <ul class="menu">
+                    <li><a href="sub01.html">회사소개</a></li>
+                    <li><a href="sub02.html">제품소개</a></li>
+                    <li><a href="sub03.html">온라인문의</a></li>
+                    <li><a href="sub04.html" aria-current="page">커뮤니티</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sub-visual sub-visual--community" aria-label="서브 비주얼">
+        <div class="sub-visual__inner">
+            <p class="sub-visual__eyebrow">COMMUNITY</p>
+            <h1 class="sub-visual__title">커뮤니티</h1>
+        </div>
+    </section>
+
+    <main class="sub-main" id="main">
+        <div class="sub-container sub-container--board">
+            <header class="board-toolbar">
+                <div class="board-toolbar__text">
+                    <h2 class="board-toolbar__title">게시판</h2>
+                    <p class="board-toolbar__desc">매장 소식·레시피·자유로운 이야기를 남겨 주세요.</p>
+                </div>
+                <a class="board-btn-write" href="#board-write">글쓰기</a>
+            </header>
+
+            <div class="board-table-wrap" role="region" aria-label="게시글 목록">
+                <table class="board-table">
+                    <caption class="visually-hidden">업로드된 게시글 목록</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="board-table__col-num">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col" class="board-table__col-author">작성자</th>
+                            <th scope="col" class="board-table__col-date">작성일</th>
+                            <th scope="col" class="board-table__col-hit">조회</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="board-table__row board-table__row--notice">
+                            <td><span class="board-badge">공지</span></td>
+                            <td>
+                                <a href="#">PARANMANJAN 신규 블렌드 티 출시 안내</a>
+                            </td>
+                            <td>관리자</td>
+                            <td>2026.04.02</td>
+                            <td>512</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><a href="#">봄 한정 플라워 티, 매장에서 만나보세요</a></td>
+                            <td>티연구소</td>
+                            <td>2026.04.18</td>
+                            <td>128</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><a href="#">집에서 우리는 아이스 티 레시피 공유합니다</a></td>
+                            <td>홍차조아</td>
+                            <td>2026.04.15</td>
+                            <td>96</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><a href="#">마포 매장 혼잡 시간대 팁 있을까요?</a></td>
+                            <td>방문객</td>
+                            <td>2026.04.12</td>
+                            <td>74</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="#">카모마일과 애플 믹스 조합 추천받아요</a></td>
+                            <td>허브러버</td>
+                            <td>2026.04.08</td>
+                            <td>61</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="#">첫 방문 후기 — 시그니처 블렌드 너무 좋았어요</a></td>
+                            <td>신규팬</td>
+                            <td>2026.04.05</td>
+                            <td>203</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <section class="board-write" id="board-write" aria-labelledby="board-write-heading">
+                <div class="board-write__head">
+                    <h2 id="board-write-heading" class="board-write__title">새 글 작성</h2>
+                    <a class="board-write__top" href="#main">목록으로</a>
+                </div>
+                <form class="board-write__form sub-form" action="#" method="post" aria-label="게시글 작성">
+                    <div class="sub-field">
+                        <label class="sub-field__label" for="post-title">제목</label>
+                        <input class="sub-field__input" id="post-title" name="title" type="text" required placeholder="제목을 입력하세요">
+                    </div>
+                    <div class="sub-field">
+                        <label class="sub-field__label" for="post-author">작성자</label>
+                        <input class="sub-field__input" id="post-author" name="author" type="text" autocomplete="nickname" required placeholder="닉네임">
+                    </div>
+                    <div class="sub-field">
+                        <label class="sub-field__label" for="post-body">내용</label>
+                        <textarea class="sub-field__textarea" id="post-body" name="body" rows="8" required placeholder="내용을 입력하세요"></textarea>
+                    </div>
+                    <div class="board-write__actions">
+                        <button class="sub-form__submit" type="submit">등록</button>
+                    </div>
+                </form>
+                <p class="sub-note">※ 정적 HTML 예시입니다. 실제 등록·목록 연동은 서버 또는 게시판 서비스가 필요합니다.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer site-footer--simple">
+        <div class="site-footer__inner">
+            <p class="site-footer__brand">PARANMANJAN</p>
+            <div class="site-footer__body">
+                <p class="site-footer__biz">(주)파란만잔&nbsp;&nbsp;사업자 등록번호 570-86-01050</p>
+                <p class="site-footer__biz">서울특별시 마포구 토정로 121-1, 2층&nbsp;&nbsp;가맹상담문의 1666-9289&nbsp;&nbsp;F. 02) 3144-7866</p>
+                <p class="site-footer__copy">Copyright © Paranmanjan Corp. All Rights Reserved. Designed By VIEW3</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <linearGradient id="metal" x1="4" y1="4" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fefefe"/>
+      <stop offset="42%" stop-color="#cdd2db"/>
+      <stop offset="100%" stop-color="#7c828d"/>
+    </linearGradient>
+  </defs>
+  <g transform="rotate(-42 26 26)">
+    <ellipse cx="19" cy="19" rx="11.5" ry="8.2" fill="url(#metal)" stroke="#5e646e" stroke-width="0.5"/>
+    <ellipse cx="15.5" cy="17.2" rx="3.6" ry="2.6" fill="#ffffff" opacity="0.5"/>
+    <path fill="none" stroke="url(#metal)" stroke-width="7" stroke-linecap="round"
+          stroke-linejoin="round" d="M28 21 C34 29 41 37 52 53"/>
+    <path fill="none" stroke="#697078" stroke-width="0.6" stroke-linecap="round"
+          d="M28 21 C34 29 41 37 52 53"/>
+  </g>
+</svg>
